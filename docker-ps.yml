@@ -1,0 +1,8 @@
+- hosts: all
+  remote_user: ec2-user
+  tasks:
+    - shell: hostname
+      register: hostname_result
+
+    - shell: docker ps
+      register: shell_result
